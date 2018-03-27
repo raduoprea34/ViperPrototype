@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MainInteractor.h"
+#import "MainPresenter.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  self.window = [[UIWindow alloc] initWithFrame: UIScreen.mainScreen.bounds];
+  MainTableViewController *mainTableViewController = [[MainTableViewController alloc] init];
+  self.window.rootViewController = mainTableViewController;
+  MainPresenter *mainPresenter = [[MainPresenter alloc] init];
+  MainInteractor *mainInteractor = [[MainInteractor alloc] init];
+  [self.window makeKeyAndVisible];
+  
+  mainTableViewController.presenter = mainPresenter;
+  mainPresenter.interactor = mainInteractor;
+  [mainPresenter connectView: mainTableViewController];
+  
   return YES;
 }
 
