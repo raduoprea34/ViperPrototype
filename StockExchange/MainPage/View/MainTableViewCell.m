@@ -26,7 +26,7 @@
   [self addSubview: self.companyImageView];
   [self.companyImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
   [self.companyImageView setImage:[UIImage imageNamed:@"logo-placeholder"]];
-  [self.companyImageView.layer setBorderWidth:5.0];
+  [self.companyImageView.layer setBorderWidth:2.0];
   [self.companyImageView.layer setBorderColor: UIColor.orangeColor.CGColor];
   [self.companyImageView.layer setCornerRadius:25.0];
   [self.companyImageView setClipsToBounds:YES];
