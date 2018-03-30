@@ -18,6 +18,7 @@
   [self setupCompanyLabelConstraints];
   [self setupCompanyCategoryLabel];
   [self setupCompanyCategoryLabelConstraints];
+  self.backgroundColor = [UIColor clearColor];
   return self;
 }
 
@@ -44,6 +45,7 @@
   [self addSubview: self.companyNameLabel];
   [self.companyNameLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
   self.companyNameLabel.text = @"Endava";
+  self.companyNameLabel.textColor = [UIColor whiteColor];
 }
 -(void) setupCompanyLabelConstraints {
   [[self.companyNameLabel.leadingAnchor constraintEqualToAnchor:self.companyImageView.trailingAnchor constant:30] setActive:YES];
@@ -59,6 +61,7 @@
   self.companyCategoryLabel.text = @"IT Solutions";
   self.companyCategoryLabel.textColor = [UIColor grayColor];
   self.companyCategoryLabel.font = [UIFont systemFontOfSize: 13];
+  self.companyCategoryLabel.textColor = [UIColor greenColor];
 }
 
 -(void) setupCompanyCategoryLabelConstraints {

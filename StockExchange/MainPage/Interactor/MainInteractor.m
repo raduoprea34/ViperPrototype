@@ -7,42 +7,26 @@
 //
 
 #import "MainInteractor.h"
-#import "CompanyStore.h"
-#import "Company.h"
+
 
 @implementation MainInteractor
 
 - (NSInteger)getCategoryCount {
-  if (CompanyStore.companies.count == 0) {
-    [CompanyStore setup];
-  }
-  return CompanyStore.companies.count;
+  return 5;
 }
 
 - (NSString *)getCategoryNameForIndex:(NSInteger)index {
-  if (CompanyStore.companies.count == 0) {
-    [CompanyStore setup];
-  }
-  Company *company = CompanyStore.companies[index];
-  return company.name;
+  return @"BitCoin";
 }
 
 
 - (NSString *)getCompanyCategoryForIndex:(NSInteger)index {
-  if (CompanyStore.companies.count == 0) {
-    [CompanyStore setup];
-  }
-  Company *company = CompanyStore.companies[index];
-  return company.category;
+  return @"USD 320.001";
 }
 
 
 - (NSString *)getCompanyLogoForIndex:(NSInteger)index {
-  if (CompanyStore.companies.count == 0) {
-    [CompanyStore setup];
-  }
-  Company *company = CompanyStore.companies[index];
-  return company.logo;
+  return @"";
 }
 
 

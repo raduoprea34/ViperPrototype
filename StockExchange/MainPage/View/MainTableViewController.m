@@ -8,6 +8,7 @@
 
 #import "MainTableViewController.h"
 #import "MainTableViewCell.h"
+#import "APIController.h"
 
 @interface MainTableViewController ()
 
@@ -19,6 +20,10 @@
   [self.tableView registerClass:[MainTableViewCell class] forCellReuseIdentifier:@"mainCell"];
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
+  self.tableView.backgroundColor = [UIColor blackColor];
+  NSURL *url = [APIController buildURL];
+  [APIController requestJSONWithURL:url ];
+  
 }
 
 //DELEGATE METHODS

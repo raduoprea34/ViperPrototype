@@ -13,10 +13,12 @@
 		241C27F9206A2A870034B96B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 241C27F8206A2A870034B96B /* main.m */; };
 		241C2806206A2C2A0034B96B /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241C2804206A2C2A0034B96B /* MainTableViewController.m */; };
 		241C280A206A302B0034B96B /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 241C2809206A302B0034B96B /* MainTableViewCell.m */; };
-		241C280E206A73DB0034B96B /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 241C280D206A73DB0034B96B /* Company.m */; };
-		241C2811206A747F0034B96B /* CompanyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 241C2810206A747F0034B96B /* CompanyStore.m */; };
 		241C2815206A77CD0034B96B /* MainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 241C2814206A77CD0034B96B /* MainPresenter.m */; };
 		241C2818206A78360034B96B /* MainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 241C2817206A78360034B96B /* MainInteractor.m */; };
+		24B58047206E78C100733B7F /* CryptoCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B58046206E78C100733B7F /* CryptoCurrency.m */; };
+		24B5804A206E798C00733B7F /* CryptoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B58049206E798C00733B7F /* CryptoStore.m */; };
+		24B5804D206E7B8000733B7F /* APIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5804C206E7B8000733B7F /* APIController.m */; };
+		24B58050206E840400733B7F /* Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5804F206E840400733B7F /* Serializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +33,19 @@
 		241C2804206A2C2A0034B96B /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		241C2808206A302B0034B96B /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		241C2809206A302B0034B96B /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
-		241C280C206A73DB0034B96B /* Company.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
-		241C280D206A73DB0034B96B /* Company.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
-		241C280F206A747F0034B96B /* CompanyStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyStore.h; sourceTree = "<group>"; };
-		241C2810206A747F0034B96B /* CompanyStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyStore.m; sourceTree = "<group>"; };
 		241C2812206A75F90034B96B /* MainPageProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPageProtocols.h; sourceTree = "<group>"; };
 		241C2813206A77CD0034B96B /* MainPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPresenter.h; sourceTree = "<group>"; };
 		241C2814206A77CD0034B96B /* MainPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPresenter.m; sourceTree = "<group>"; };
 		241C2816206A78360034B96B /* MainInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainInteractor.h; sourceTree = "<group>"; };
 		241C2817206A78360034B96B /* MainInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainInteractor.m; sourceTree = "<group>"; };
+		24B58045206E78C100733B7F /* CryptoCurrency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCurrency.h; sourceTree = "<group>"; };
+		24B58046206E78C100733B7F /* CryptoCurrency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptoCurrency.m; sourceTree = "<group>"; };
+		24B58048206E798C00733B7F /* CryptoStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoStore.h; sourceTree = "<group>"; };
+		24B58049206E798C00733B7F /* CryptoStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptoStore.m; sourceTree = "<group>"; };
+		24B5804B206E7B8000733B7F /* APIController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIController.h; sourceTree = "<group>"; };
+		24B5804C206E7B8000733B7F /* APIController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIController.m; sourceTree = "<group>"; };
+		24B5804E206E840400733B7F /* Serializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializer.h; sourceTree = "<group>"; };
+		24B5804F206E840400733B7F /* Serializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Serializer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,10 @@
 				241C2802206A2BE90034B96B /* Interactor */,
 				241C2801206A2BE20034B96B /* Presenter */,
 				241C2812206A75F90034B96B /* MainPageProtocols.h */,
+				24B5804B206E7B8000733B7F /* APIController.h */,
+				24B5804C206E7B8000733B7F /* APIController.m */,
+				24B5804E206E840400733B7F /* Serializer.h */,
+				24B5804F206E840400733B7F /* Serializer.m */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -127,10 +137,10 @@
 		241C280B206A73B40034B96B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				241C280C206A73DB0034B96B /* Company.h */,
-				241C280D206A73DB0034B96B /* Company.m */,
-				241C280F206A747F0034B96B /* CompanyStore.h */,
-				241C2810206A747F0034B96B /* CompanyStore.m */,
+				24B58045206E78C100733B7F /* CryptoCurrency.h */,
+				24B58046206E78C100733B7F /* CryptoCurrency.m */,
+				24B58048206E798C00733B7F /* CryptoStore.h */,
+				24B58049206E798C00733B7F /* CryptoStore.m */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -205,14 +215,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B5804D206E7B8000733B7F /* APIController.m in Sources */,
+				24B58050206E840400733B7F /* Serializer.m in Sources */,
 				241C27F9206A2A870034B96B /* main.m in Sources */,
-				241C280E206A73DB0034B96B /* Company.m in Sources */,
 				241C27EB206A2A860034B96B /* AppDelegate.m in Sources */,
+				24B58047206E78C100733B7F /* CryptoCurrency.m in Sources */,
 				241C2818206A78360034B96B /* MainInteractor.m in Sources */,
 				241C280A206A302B0034B96B /* MainTableViewCell.m in Sources */,
 				241C2806206A2C2A0034B96B /* MainTableViewController.m in Sources */,
+				24B5804A206E798C00733B7F /* CryptoStore.m in Sources */,
 				241C2815206A77CD0034B96B /* MainPresenter.m in Sources */,
-				241C2811206A747F0034B96B /* CompanyStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
