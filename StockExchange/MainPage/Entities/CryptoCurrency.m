@@ -13,7 +13,6 @@
 -(instancetype) initWithName: (NSString *)name andUsdValue: (NSNumber *) usdValue withImageURL: (NSString *) imageURL {
   self = [super init];
   self.name = name;
-  self.usdValue = usdValue;
   self.imageURL = imageURL;
   return self;
 }

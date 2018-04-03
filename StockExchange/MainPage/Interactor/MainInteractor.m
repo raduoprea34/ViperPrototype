@@ -7,27 +7,36 @@
 //
 
 #import "MainInteractor.h"
+#import "APIController.h"
 
 
 @implementation MainInteractor
 
-- (NSInteger)getCategoryCount {
-  return 5;
+- (NSInteger)getCurrencyCount {
+  NSArray *currencies = [self.cryptoStore.currencies[@"Data"] allKeys];
+  return currencies.count;
 }
 
-- (NSString *)getCategoryNameForIndex:(NSInteger)index {
-  return @"BitCoin";
+- (NSString *)getCurrencyNameForIndex:(NSInteger)index {
+  NSArray *currencies = [self.cryptoStore.currencies[@"Data"] allKeys];
+  NSDictionary *currentKey = currencies[index];
+  return self.cryptoStore.currencies[@"Data"][currentKey][@"CoinName"];
 }
 
-
-- (NSString *)getCompanyCategoryForIndex:(NSInteger)index {
-  return @"USD 320.001";
+- (NSString *)getCurrencyLogoForIndex:(NSInteger)index {
+  NSArray *currencies = [self.cryptoStore.currencies[@"Data"] allKeys];
+  NSDictionary *currentKey = currencies[index];
+  NSLog(@"%@",self.cryptoStore.currencies[@"Data"][currentKey]);
+  return self.cryptoStore.currencies[@"Data"][currentKey][@"ImageUrl"];
 }
 
-
-- (NSString *)getCompanyLogoForIndex:(NSInteger)index {
-  return @"";
+- (void)createCryptoStore {
+  [APIController requestJSONWithURL:[APIController buildURL] withCompletion:^void (NSMutableDictionary * result) {
+    self.cryptoStore = [[CryptoStore alloc] initWithJSONDictionary:result];
+    [self.presenter didFinishCreatingCryptoStore];
+  }];
 }
+
 
 
 @end

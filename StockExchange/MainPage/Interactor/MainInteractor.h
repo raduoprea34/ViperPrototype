@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "MainPageProtocols.h"
+#import "CryptoStore.h"
 
 @interface MainInteractor : NSObject <MainInteractorProtocol>
 
 @property id<MainPresenterProtocol> presenter;
+@property CryptoStore *cryptoStore;
 
 @end

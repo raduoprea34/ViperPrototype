@@ -10,7 +10,7 @@
 
 @implementation CryptoStore
 
--(instancetype) initWithObjects: (NSMutableArray *) currencies {
+-(instancetype) initWithJSONDictionary: (NSMutableDictionary *) currencies {
   self = [super init];
   self.currencies = currencies;
   return self;

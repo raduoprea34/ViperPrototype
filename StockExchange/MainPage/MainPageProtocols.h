@@ -8,18 +8,21 @@
 //
 
 @protocol MainViewProtocol
+-(void) updateTableView;
 @end
 
 @protocol MainPresenterProtocol
--(NSString *) getCategoryNameForIndex: (NSInteger) index ;
--(NSString *) getCompanyCategoryForIndex: (NSInteger) index;
--(NSString *) getCompanyLogoForIndex: (NSInteger) index;
--(NSInteger) getCategoryCount;
+-(NSString *) getCurrencyNameForIndex: (NSInteger) index ;
+-(NSString *) getCurrencyLogoForIndex: (NSInteger) index;
+-(NSInteger) getCurrencyCount;
+-(void) viewDidLoad;
+-(void) didFinishCreatingCryptoStore;
 @end
 
 @protocol MainInteractorProtocol
--(NSString *) getCategoryNameForIndex: (NSInteger) index ;
--(NSString *) getCompanyCategoryForIndex: (NSInteger) index;
--(NSString *) getCompanyLogoForIndex: (NSInteger) index;
--(NSInteger) getCategoryCount;
+-(NSString *) getCurrencyNameForIndex: (NSInteger) index ;
+-(NSString *) getCurrencyLogoForIndex: (NSInteger) index;
+-(NSInteger) getCurrencyCount;
+-(void) createCryptoStore;
 @end
+

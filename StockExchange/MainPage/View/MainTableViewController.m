@@ -21,9 +21,7 @@
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   self.tableView.backgroundColor = [UIColor blackColor];
-  NSURL *url = [APIController buildURL];
-  [APIController requestJSONWithURL:url ];
-  
+  [self.presenter viewDidLoad];
 }
 
 //DELEGATE METHODS
@@ -33,19 +31,31 @@
 
 //DATASOURCE METHODS
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [self.presenter getCategoryCount];
+  return [self.presenter getCurrencyCount];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   MainTableViewCell *customTableViewCell = [[MainTableViewCell alloc] init];
-  customTableViewCell.companyNameLabel.text = [self.presenter getCategoryNameForIndex:indexPath.row];
-  customTableViewCell.companyCategoryLabel.text = [self.presenter getCompanyCategoryForIndex:indexPath.row];
-    UIImage *image = [UIImage imageNamed:[self.presenter getCompanyLogoForIndex:indexPath.row]];
-  customTableViewCell.companyImageView.image = image;
-
-  ;
+  customTableViewCell.companyNameLabel.text = [self.presenter getCurrencyNameForIndex:indexPath.row];
+  
+  NSString *imageURLString = [NSString stringWithFormat: @"https://cryptocompare.com%@",[self.presenter getCurrencyLogoForIndex:indexPath.row]];
+  NSURL *imageURL = [NSURL URLWithString:imageURLString];
+  
+  NSURLRequest *urlRequest = [NSURLRequest requestWithURL:imageURL];
+  [[NSURLSession.sharedSession dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    UIImage *image = [UIImage imageWithData:data];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      customTableViewCell.companyImageView.image = image;
+    });
+  }] resume];
   
   return customTableViewCell;
+}
+
+-(void) updateTableView{
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self.tableView reloadData];
+  });
 }
 
 @end

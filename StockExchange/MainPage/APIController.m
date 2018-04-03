@@ -19,10 +19,10 @@
   return components.URL;
 }
 
-+(void) requestJSONWithURL:(NSURL *)url {
++(void) requestJSONWithURL: (NSURL *) url withCompletion: (void (^)(NSMutableDictionary *)) completion {
   [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-    NSDictionary *jsonObject = [Serializer jsonDictionaryFromData:data];
-    NSLog(@"%@", jsonObject);
+    NSMutableDictionary *jsonObject = (NSMutableDictionary *)[Serializer jsonDictionaryFromData:data];
+    completion(jsonObject);
   }] resume];
 }
 

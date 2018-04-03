@@ -10,23 +10,27 @@
 
 @implementation MainPresenter
 
-- (NSInteger)getCategoryCount {
-  return [self.interactor getCategoryCount];
+- (NSInteger)getCurrencyCount {
+  return [self.interactor getCurrencyCount];
 }
 
-- (NSString *)getCategoryNameForIndex:(NSInteger)index {
-  return [self.interactor getCategoryNameForIndex:index];
+- (NSString *)getCurrencyNameForIndex:(NSInteger)index {
+  return [self.interactor getCurrencyNameForIndex:index];
+}
+
+- (NSString *)getCurrencyLogoForIndex:(NSInteger)index {
+  return [self.interactor getCurrencyLogoForIndex:index];
+}
+
+- (void)didFinishCreatingCryptoStore {
+  [self.view updateTableView];
 }
 
 
-- (NSString *)getCompanyCategoryForIndex:(NSInteger)index {
-  return [self.interactor getCompanyCategoryForIndex:index];
+- (void)viewDidLoad {
+  [self.interactor createCryptoStore];
 }
 
-
-- (NSString *)getCompanyLogoForIndex:(NSInteger)index {
-  return [self.interactor getCompanyLogoForIndex:index];
-}
 
 
 -(void) connectView:(id<MainViewProtocol>)view {

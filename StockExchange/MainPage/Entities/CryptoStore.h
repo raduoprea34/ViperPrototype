@@ -10,6 +10,7 @@
 
 @interface CryptoStore : NSObject
 
-@property NSMutableArray *currencies;
+@property NSMutableDictionary *currencies;
+-(instancetype) initWithJSONDictionary: (NSMutableDictionary *) currencies;
 
 @end

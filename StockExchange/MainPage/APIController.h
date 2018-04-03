@@ -10,7 +10,7 @@
 
 @interface APIController : NSObject
 
-+(void) requestJSONWithURL: (NSURL *) url;
++(void) requestJSONWithURL: (NSURL *) url withCompletion: (void (^)(NSMutableDictionary *)) completion;
 +(NSURL *) buildURL;
 
 @end
