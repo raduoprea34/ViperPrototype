@@ -16,8 +16,8 @@
   [self setupCompanyLogoConstraints];
   [self setupCompanyLabel];
   [self setupCompanyLabelConstraints];
-  [self setupCompanyCategoryLabel];
-  [self setupCompanyCategoryLabelConstraints];
+ // [self setupCompanyCategoryLabel];
+ // [self setupCompanyCategoryLabelConstraints];
   self.backgroundColor = [UIColor clearColor];
   return self;
 }
@@ -27,8 +27,8 @@
   [self addSubview: self.companyImageView];
   [self.companyImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
   [self.companyImageView setImage:[UIImage imageNamed:@"logo-placeholder"]];
-  [self.companyImageView.layer setBorderWidth:2.0];
-  [self.companyImageView.layer setBorderColor: UIColor.orangeColor.CGColor];
+  [self.companyImageView.layer setBorderWidth:1.0];
+  [self.companyImageView.layer setBorderColor: UIColor.blackColor.CGColor];
   [self.companyImageView.layer setCornerRadius:25.0];
   [self.companyImageView setClipsToBounds:YES];
 }
@@ -46,28 +46,29 @@
   [self.companyNameLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
   self.companyNameLabel.text = @"Endava";
   self.companyNameLabel.textColor = [UIColor whiteColor];
+  self.companyNameLabel.font = [UIFont systemFontOfSize: 20];
 }
 -(void) setupCompanyLabelConstraints {
   [[self.companyNameLabel.leadingAnchor constraintEqualToAnchor:self.companyImageView.trailingAnchor constant:30] setActive:YES];
-  [[self.companyNameLabel.centerYAnchor constraintEqualToAnchor:self.centerYAnchor constant:-10] setActive:YES];
+  [[self.companyNameLabel.centerYAnchor constraintEqualToAnchor:self.centerYAnchor constant:0] setActive:YES];
   [[self.companyNameLabel.heightAnchor constraintEqualToConstant:50] setActive:YES];
   [[self.companyNameLabel.centerXAnchor constraintEqualToAnchor:self.centerXAnchor constant: 0] setActive:YES];
 }
 
--(void) setupCompanyCategoryLabel {
-  self.companyCategoryLabel = [[UILabel alloc] init];
-  [self addSubview:self.companyCategoryLabel];
-  [self.companyCategoryLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-  self.companyCategoryLabel.text = @"IT Solutions";
-  self.companyCategoryLabel.textColor = [UIColor grayColor];
-  self.companyCategoryLabel.font = [UIFont systemFontOfSize: 13];
-  self.companyCategoryLabel.textColor = [UIColor greenColor];
-}
-
--(void) setupCompanyCategoryLabelConstraints {
-  [[self.companyCategoryLabel.leadingAnchor constraintEqualToAnchor:self.companyImageView.trailingAnchor constant:30]setActive:YES];
-  [[self.companyCategoryLabel.topAnchor constraintEqualToAnchor:self.companyNameLabel.bottomAnchor constant:-10] setActive:YES];
-  [[self.companyCategoryLabel.centerXAnchor constraintEqualToAnchor:self.centerXAnchor constant:0] setActive:YES];
-}
+//-(void) setupCompanyCategoryLabel {
+//  self.companyCategoryLabel = [[UILabel alloc] init];
+//  [self addSubview:self.companyCategoryLabel];
+//  [self.companyCategoryLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+//  self.companyCategoryLabel.text = @"IT Solutions";
+//  self.companyCategoryLabel.textColor = [UIColor grayColor];
+//  self.companyCategoryLabel.font = [UIFont systemFontOfSize: 13];
+//  self.companyCategoryLabel.textColor = [UIColor greenColor];
+//}
+//
+//-(void) setupCompanyCategoryLabelConstraints {
+//  [[self.companyCategoryLabel.leadingAnchor constraintEqualToAnchor:self.companyImageView.trailingAnchor constant:30]setActive:YES];
+//  [[self.companyCategoryLabel.topAnchor constraintEqualToAnchor:self.companyNameLabel.bottomAnchor constant:-10] setActive:YES];
+//  [[self.companyCategoryLabel.centerXAnchor constraintEqualToAnchor:self.centerXAnchor constant:0] setActive:YES];
+//}
 
 @end

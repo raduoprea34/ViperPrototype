@@ -78,6 +78,7 @@
 		241C27E8206A2A860034B96B /* StockExchange */ = {
 			isa = PBXGroup;
 			children = (
+				24AACF5A207DFC8A008B58D7 /* SecondPage */,
 				241C27FF206A2BC90034B96B /* MainPage */,
 				241C27E9206A2A860034B96B /* AppDelegate.h */,
 				241C27EA206A2A860034B96B /* AppDelegate.m */,
@@ -143,6 +144,13 @@
 				24B58049206E798C00733B7F /* CryptoStore.m */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		24AACF5A207DFC8A008B58D7 /* SecondPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SecondPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
